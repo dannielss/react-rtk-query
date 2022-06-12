@@ -11,7 +11,7 @@ interface Props {
 const BG =
   "https://i5.walmartimages.com/asr/bcc4085e-c311-4886-a7a4-aa58127883d7.5958f8a36f96aa4c08dbc4a8a580e57c.png?odnWidth=612&odnHeight=612&odnBg=ffffff";
 
-export const Card: React.FC<Props> = ({ character }) => {
+const Card: React.FC<Props> = ({ character }) => {
   const { data, loading } = usePalette(`${character.image}`);
 
   if (loading) return <div>Loading...</div>;
@@ -29,3 +29,5 @@ export const Card: React.FC<Props> = ({ character }) => {
     </Styled.Container>
   );
 };
+
+export default Card;
